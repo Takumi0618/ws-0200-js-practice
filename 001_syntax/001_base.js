@@ -26,7 +26,6 @@ displayConst();
 function displayLet() {
   let hoge = "hoge";
   console.log(hoge);
-  
 }
 
 displayLet();
@@ -67,11 +66,16 @@ subtractTwoArgs(9, 4);
  *
  */
 function quotientTwoArgs(a, b) {
-  console.log(a / b);
-  return a / b;
+  if (b === 0) {
+    console.log("null");
+    return null;
+  } else {
+    console.log(Math.floor(a / b));
+    return Math.floor(a / b);
+  }
 }
 
-quotientTwoArgs(10, 3);
+quotientTwoArgs(10, 0);
 
 /**
  *  1.8 渡された二つの引数の積を返却するメソッドを実装してください
@@ -101,7 +105,7 @@ remainderTwoArgs(9);
 function isEven(a) {
   const isEven = a % 2
   console.log(isEven === 0)
-  return isEven;
+  return isEven === 0;
 }
 
 isEven(10)
@@ -112,6 +116,7 @@ isEven(10)
  */
 function concatString(a, b) {
   console.log(a + b);
+  return a + b;
 }
 
 concatString("こんにちは", "太郎さん");

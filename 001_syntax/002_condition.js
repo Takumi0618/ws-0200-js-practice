@@ -49,11 +49,17 @@ greeding(3);
  */
 
 function getDay(day) {
-  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"  ];
-  console.log(days[day])
+  const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+      if (0 <= day && day < days.length) {
+        console.log(days[day]);
+        return days[day];
+      } else {
+        console.log(days[day % 7]);
+        return days[day % 7];
+    }
 }
 
-getDay(4);
+getDay(7);
 
 module.exports = {
   printMessageByAge,

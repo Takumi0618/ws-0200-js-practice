@@ -14,6 +14,7 @@ function getPersonObject() {
     gender: 'male',
   };
   console.log(person);
+  return person;
 }
 
 getPersonObject();
@@ -33,16 +34,20 @@ getPersonObject();
  */
 
 function mutateObject(person) {
-  const date = {
-    name: 'Bob',
-    age: 32,
-    gender: 'male',
-  };
-  date.name = person.name;
-  date.age = person.age;
-  date.gender = person.gender;
-
-  console.log(date);
+  // const date = new Object;
+  // date.name = person.name;
+  // date.age = person.age;
+  // date.gender = person.gender;
+  // console.log(date);
+  // return date;
+  const date = new Object;
+  if (person === dateA) {
+    date.name = dateB.name;
+    date.age = dateB.age;
+    date.gender = dateB.gender;
+    console.log(date);
+    return date;
+  }
 }
 
 const dateA = {
@@ -57,7 +62,7 @@ const dateB = {
   gender: 'female',
 }
 
-mutateObject(dateB);
+mutateObject(dateA);
 
 /**
  *  6.3 下記引数で渡される配列にランダムな1 ~10の数字を割り振り、オブジェクトとして返す
@@ -86,6 +91,7 @@ function assignNumber(persons) {
     personNum[person] = Math.floor(Math.random() * 10 + 1);
   })
   console.log(personNum);
+  return personNum;
 }
 
 const members = ['Bob', 'Mary', 'Ann', 'Mike']
@@ -104,7 +110,18 @@ assignNumber(members);
  */
 
 function isDuplicate(array) {
+  // const obj = new Object();
+  // const setArray = new Set(array);
+  // obj.judge = (setArray.size !== array.length);
+  // console.log(obj);
+  // return obj;
+  const setArray = new Set(array);
+  console.log(setArray.size !== array.length)
+  return setArray.size !== array.length;
 }
+
+const nums4 = [1, 2, 2, 3];
+isDuplicate(nums4);
 
 module.exports = {
   getPersonObject,

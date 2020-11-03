@@ -4,7 +4,9 @@
  */
 
 function printArray(array) {
-  console.log(array);
+  for (i=0; i < array.length; i++) {
+    console.log(array[i]);
+  }
 }
 const nums = [0, 1, 2, 3]
 printArray(nums);
@@ -41,6 +43,7 @@ function getDays() {
 
 function findNum(array, num) {
   console.log(array.includes(num));
+  return array.includes(num);
 }
 
 findNum(nums, 5);
@@ -58,6 +61,7 @@ findNum(nums, 5);
 function isDuplicate(array) {
   const setArray = new Set(array);
   console.log(setArray.size !== array.length)
+  return setArray.size !== array.length;
 }
 
 const nums2 = [1, 2, 2, 3]
